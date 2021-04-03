@@ -1,6 +1,12 @@
 import java.util.*;
 
 class ServiceList{
+    /**
+     * Метод для сравнения классов по методу - add
+     * @param list - переменная типа сравниваемых нами классов
+     * @param name - Наименование класса
+     * @param k - столько количество раз будет вызываться метод
+     */
     public void addList(List list, String name, int k){
         Date start = new Date();
 
@@ -31,6 +37,12 @@ class ServiceList{
         System.out.println(name + " : " + time);
     }
 
+    /**
+     * Метод для сравнения классов по методу - get
+     * @param list - переменная типа сравниваемых нами классов
+     * @param name - Наименование класса
+     * @param k - столько количество раз будет вызываться метод
+     */
     public void getList(List list, String name, int k){
         Date start = new Date();
         int l = list.size();
@@ -63,6 +75,12 @@ class ServiceList{
         System.out.println(name + " : " + time);
     }
 
+    /**
+     * Метод для сравнения классов по методу - remove
+     * @param list - переменная типа сравниваемых нами классов
+     * @param name - Наименование класса
+     * @param k - столько количество раз будет вызываться метод
+     */
     public void removeList(List list, String name, int k){
         Date start = new Date();
         int l = list.size();
@@ -102,22 +120,22 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int k = in.nextInt();
 
-        List<Object> al = new ArrayList<>();
-        List<Object> ll = new LinkedList<>();
+        List<Object> arrayList = new ArrayList<>();
+        List<Object> linkedList = new LinkedList<>();
 
         System.out.println("Add elements:");
-        new ServiceList().addList(al, "ArrayList", k);
-        new ServiceList().addList(ll, "LinkedList", k);
+        new ServiceList().addList(arrayList, "ArrayList", k);
+        new ServiceList().addList(linkedList, "LinkedList", k);
         System.out.println("- - - - - - - - -");
 
         System.out.println("Get elements:");
-        new ServiceList().getList(al, "ArrayList", k);
-        new ServiceList().getList(ll, "LinkedList", k);
+        new ServiceList().getList(arrayList, "ArrayList", k);
+        new ServiceList().getList(linkedList, "LinkedList", k);
         System.out.println("- - - - - - - - -");
 
         System.out.println("Remove elements:");
-        new ServiceList().removeList(al, "ArrayList", k);
-        new ServiceList().removeList(ll, "LinkedList", k);
+        new ServiceList().removeList(arrayList, "ArrayList", k);
+        new ServiceList().removeList(linkedList, "LinkedList", k);
         System.out.println("- - - - - - - - -");
     }
 }
