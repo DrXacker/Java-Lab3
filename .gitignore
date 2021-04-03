@@ -1,3 +1,7 @@
 /target/
 /src/test/
 /.idea/
+
+target/
+.idea/
+src/test
